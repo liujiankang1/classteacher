@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 确保Modal对话框在最上层显示 */
+.leave-statistics-modal {
+  position: relative;
+  z-index: 1050 !important;
+}
+
+/* 调整Modal对话框的遮罩层，确保覆盖左侧菜单 */
+.ant-modal-mask {
+  z-index: 1040 !important;
+}
+
+/* 调整Modal对话框的包装器，确保在左侧菜单之上 */
+.ant-modal-wrap {
+  z-index: 1045 !important;
+}
+
+/* 确保Modal对话框内容区域正确显示 */
+.ant-modal-content {
+  position: relative;
+  z-index: 1050 !important;
+}
+
+/* 全局解决方案：确保所有Modal都显示在侧边栏之上 */
+body .ant-modal-root {
+  position: fixed;
+  z-index: 1400 !important;
+}
+
+body .ant-modal-mask {
+  z-index: 1300 !important;
+}
+
+body .ant-modal-wrap {
+  z-index: 1350 !important;
+}
+
+/* 确保Modal在小屏幕上也能正确显示 */
+@media (max-width: 768px) {
+  body .ant-modal {
+    max-width: 95vw !important;
+    margin: 0 auto;
+  }
+}

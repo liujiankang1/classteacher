@@ -1,0 +1,50 @@
+/* 请假统计页面样式 */
+.leave-statistics-container {
+  padding: 20px;
+}
+
+/* 确保Modal对话框正确显示 */
+.leave-statistics-modal {
+  position: relative;
+}
+
+/* 调整Modal位置，避免被左侧菜单遮挡 */
+.leave-statistics-modal .ant-modal-content {
+  margin-left: 240px; /* 根据左侧菜单宽度调整 */
+}
+
+/* 确保Modal内容区域宽度合适 */
+.leave-statistics-modal .ant-modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* 表格样式优化 */
+.leave-statistics-container .ant-table {
+  overflow-x: auto;
+}
+
+/* 统计卡片样式 */
+.leave-statistics-container .stat-card {
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  height: 100%;
+}
+
+/* 图表容器样式 */
+.leave-statistics-container .chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .leave-statistics-modal .ant-modal-content {
+    margin-left: 0;
+  }
+  
+  .leave-statistics-container {
+    padding: 10px;
+  }
+} 
