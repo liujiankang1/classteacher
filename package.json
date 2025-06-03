@@ -1,6 +1,7 @@
 {
   "name": "frontend_react",
   "version": "0.1.0",
+  "homepage": "https://github.com/liujiankang1/classteacher.git",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
@@ -35,7 +36,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "@types/echarts": "^4.9.22"
+    "@types/echarts": "^4.9.22",
+    "gh-pages": "^6.3.0"
   }
 }
